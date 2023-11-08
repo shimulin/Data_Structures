@@ -22,13 +22,13 @@ void merge(int x, int y) {
         return;
     }
 
-    if (parent[x] < parent[y]) {
+    if (height[x] < height[y]) {
         parent[x] = y;
-    } else if (parent[y] < parent[x]) {
+    } else if (height[y] < height[x]) {
         parent[y] = x;
     } else {
-        parent[x] = y;
-        parent[y]++;
+        parent[y] = x;
+        parent[x]++;
     }
 }
 
